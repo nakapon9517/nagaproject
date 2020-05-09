@@ -3,15 +3,21 @@
   <head>
     <title>Hello</title>
     <meta charset="utf-8" />
+    <link th:href="@{/css/index.css}" rel="stylesheet" type="text/css"/>
   </head>
   <body>
-  	<form method="post" action="#" th:action="@{./confirm}" th:object="${form}">
-	    <h1>Springboot Hello Sample</h1>
-	    <div>
-	      <span th:text="${message}"></span>
-	      <span th:text="${message}"></span>
-	      <span th:text="${message}"></span>
-	    </div>
+  	<form method="post" action="#" th:action="@{./login}" th:object="${form}">
+  		<div class="fade">
+		    <h1>Springboot Hello Sample</h1>
+		    <div>
+		      <span th:text="${message}"></span>
+		      <span th:text="${message}"></span>
+		      <span th:text="${message}"></span>
+		    </div>
+	        <input type="submit" name="user" value="一般ユーザー"/>
+	   		<input type="submit" name="admin" value="管理者" />
+   		</div>
     </form>
+  <script type="text/javascript" th:src="@{/js/index.js}"></script>
   </body>
 </html>
