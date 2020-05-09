@@ -1,1 +1,2 @@
 #"server.servlet.context-path=/login"
+spring.mvc.favicon.enabled=false

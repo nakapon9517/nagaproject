@@ -6,12 +6,10 @@
     <link th:href="@{/css/index.css}" rel="stylesheet" type="text/css"/>
   </head>
   <body>
-  	<form method="post" action="#" th:action="@{./login}" th:object="${form}">
+  	<form method="post" action="#" th:action="@{./login}" th:object="${form}" onsubmit="checkAuth()">
   		<div class="fade">
-		    <h1>Springboot Hello Sample</h1>
+		    <h1>Springboot Login</h1>
 		    <div>
-		      <span th:text="${message}"></span>
-		      <span th:text="${message}"></span>
 		      <span th:text="${message}"></span>
 		    </div>
 	        <input type="submit" name="user" value="一般ユーザー"/>
