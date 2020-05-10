@@ -4,5 +4,9 @@ window.onload = function(){
 }
 
 var checkAuth = () => {
-	confirm('ページ遷移してもよろしいでしょうか？');
+	alert('ページ遷移します');
 }
+
+$('#testbutton').click(function() {
+    alert('click test!!')
+})

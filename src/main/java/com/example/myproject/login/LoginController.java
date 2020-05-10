@@ -11,25 +11,25 @@ import com.example.myproject.constants.Constants;
 @RequestMapping(value = "/login")
 public class LoginController {
 
-	@RequestMapping(method = RequestMethod.POST)
-	public void init(Model model) {
-		// message に文字を代入
-		model.addAttribute("message", "init");
+    @RequestMapping(method = RequestMethod.POST)
+    public void init(Model model) {
+        // message に文字を代入
+        model.addAttribute("message", "init");
 //		return Constants.PAGE_USER;
-	}
+    }
 
-	@RequestMapping(params = "user", method = RequestMethod.POST)
-	public String loginAuthUser(Model model) {
-		// message に文字を代入
-		model.addAttribute("message", "user");
-		return Constants.PAGE_USER;
-	}
+    @RequestMapping(params = "user", method = RequestMethod.POST)
+    public String loginAuthUser(Model model) {
+        // message に文字を代入
+        model.addAttribute("message", "user");
+        return Constants.PAGE_USER;
+    }
 
-	@RequestMapping(params = "admin", method = RequestMethod.POST)
-	public String loginAuthAdmin(Model model) {
-		// message に文字を代入
-		model.addAttribute("message", "admin");
-		return Constants.PAGE_ADMIN;
-	}
+    @RequestMapping(params = "admin", method = RequestMethod.POST)
+    public String loginAuthAdmin(Model model) {
+        // message に文字を代入
+        model.addAttribute("message", "admin");
+        return Constants.PAGE_ADMIN;
+    }
 
 }

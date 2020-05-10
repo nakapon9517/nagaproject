@@ -3,19 +3,26 @@
   <head>
     <title>Hello</title>
     <meta charset="utf-8" />
+    <!--  jquery導入 -->
+    <script type='text/javascript' src='webjars/jquery/3.5.1/dist/jquery.min.js'></script>
+    <!-- boostrap導入 -->
+    <link rel='stylesheet' href='webjars/bootstrap/4.4.1/css/bootstrap.min.css'>
+    <!-- 固有CSS -->
     <link th:href="@{/css/index.css}" rel="stylesheet" type="text/css"/>
   </head>
   <body>
-  	<form method="post" action="#" th:action="@{./login}" th:object="${form}" onsubmit="checkAuth()">
-  		<div class="fade">
-		    <h1>Springboot Login</h1>
-		    <div>
-		      <span th:text="${message}"></span>
-		    </div>
-	        <input type="submit" name="user" value="一般ユーザー" formmethod="post"/>
-	   		<input type="submit" name="admin" value="管理者" />
-   		</div>
+    <form method="post" action="#" th:action="@{./login}" th:object="${form}" onsubmit="checkAuth()">
+      <div class="container">
+        <h1>Springboot Login</h1>
+        <p class="text-primary fade">aaa</p>
+        <div>
+          <span th:text="${message}"></span>
+        </div>
+        <input type="button" id="testbutton" value="Test" class="test-button"/>
+        <input type="submit" name="user" value="一般ユーザー" formmethod="post"/>
+        <input type="submit" name="admin" value="管理者" />
+      </div>
     </form>
-  <script type="text/javascript" th:src="@{/js/index.js}"></script>
+    <script type="text/javascript" th:src="@{/js/index.js}"></script>
   </body>
 </html>
