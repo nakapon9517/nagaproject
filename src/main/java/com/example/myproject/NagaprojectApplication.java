@@ -11,3 +11,4 @@ public class NagaprojectApplication {
 		SpringApplication.run(NagaprojectApplication.class, args);
 	}
 }
+//test
