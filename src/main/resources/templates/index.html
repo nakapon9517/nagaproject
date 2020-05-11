@@ -18,6 +18,11 @@
         <div>
           <span th:text="${message}"></span>
         </div>
+		<!-- ID・passwordフォーム ログインボタン作成 -->
+        User ID: <input type="text" name="uid" size="40" maxlength="32"/><br><br>
+        PassWord: <input type="password" name="pwd" size="40" maxlength="32"/><br><br>
+        <input type="submit"  value="Login"><br><br>
+
         <input type="button" id="testbutton" value="Test" class="test-button"/>
         <input type="submit" name="user" value="一般ユーザー" formmethod="post"/>
         <input type="submit" name="admin" value="管理者" />
