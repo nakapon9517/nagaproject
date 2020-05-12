@@ -28,7 +28,7 @@ public class LoginController {
     @RequestMapping(params = "admin", method = RequestMethod.POST)
     public String loginAuthAdmin(Model model) {
         // message に文字を代入
-        model.addAttribute("message", "admina");
+        model.addAttribute("message", "admin");
         return Constants.PAGE_ADMIN;
     }
 
