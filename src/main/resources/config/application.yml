@@ -1,2 +1,5 @@
 #"server.servlet.context-path=/login"
-spring.mvc.favicon.enabled=false
+spring:
+#  mvc:
+#    favicon.enabled: false
+  thymeleaf:    cache: false

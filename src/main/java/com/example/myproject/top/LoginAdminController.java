@@ -1,4 +1,4 @@
-package com.example.myproject.login;
+package com.example.myproject.top;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
