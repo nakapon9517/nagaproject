@@ -27,9 +27,9 @@ public class LoginController {
 		return Constants.PAGE_INDEX;
 	}
 	@RequestMapping(value = "/login", params = "auth", method = RequestMethod.POST)
-	public String auth(@ModelAttribute LoginForm loginForm, Model model) {
-	    session.setAttribute("form", loginForm);
-	    return loginLogic.loginAuth(loginForm, model);
+    public String auth(@ModelAttribute LoginForm loginForm, Model model) {
+        session.setAttribute("form", loginForm);
+        return loginLogic.loginAuth(loginForm, model);
 	}
 
 }
