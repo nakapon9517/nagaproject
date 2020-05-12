@@ -1,35 +1,35 @@
 package com.example.myproject.login;
 
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.example.myproject.constants.Constants;
 
 @Controller
-@RequestMapping(value = "/login")
+
 public class LoginController {
 
-    @RequestMapping(method = RequestMethod.POST)
-    public void init(Model model) {
-        // message に文字を代入
-        model.addAttribute("message", "init");
-//		return Constants.PAGE_USER;
-    }
-
-    @RequestMapping(params = "user", method = RequestMethod.POST)
-    public String loginAuthUser(Model model) {
-        // message に文字を代入
-        model.addAttribute("message", "user");
-        return Constants.PAGE_USER;
-    }
-
-    @RequestMapping(params = "admin", method = RequestMethod.POST)
-    public String loginAuthAdmin(Model model) {
-        // message に文字を代入
-        model.addAttribute("message", "admin");
-        return Constants.PAGE_ADMIN;
-    }
-
+	@Autowired
+	private LoginLogic loginLogic;
+	
+	@Autowired
+	private HttpSession session;
+	
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String init(Model model) {
+		model.addAttribute("form",new loginForm());
+		return Constants.PAGE_INDEX;
+		
+	@RequestMapping(value = "/login", params = "auth", method = RequestMethod.POST)
+	public String auth(@ModelAttribute LoginForm loginForm, Model model) {
+	    session.setAttribute("form", loginForm);
+	    return loginLogic.loginAuth(loginForm, model);
+	}
+	
 }
