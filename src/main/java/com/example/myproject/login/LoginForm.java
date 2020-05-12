@@ -3,8 +3,9 @@ package com.example.myproject.login;
 
 import java.io.Serializable;
 
-import jdk.nashorn.internal.objects.annotations.Getter;
-import jdk.nashorn.internal.objects.annotations.Setter;
+import lombok.Getter;
+import lombok.Setter;
+
 @Getter
 @Setter
 public class LoginForm implements Serializable {

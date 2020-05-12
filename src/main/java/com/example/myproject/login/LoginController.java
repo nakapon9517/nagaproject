@@ -17,19 +17,19 @@ public class LoginController {
 
 	@Autowired
 	private LoginLogic loginLogic;
-	
+
 	@Autowired
 	private HttpSession session;
-	
+
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String init(Model model) {
-		model.addAttribute("form",new loginForm());
+		model.addAttribute("form",new LoginForm());
 		return Constants.PAGE_INDEX;
-		
+	}
 	@RequestMapping(value = "/login", params = "auth", method = RequestMethod.POST)
 	public String auth(@ModelAttribute LoginForm loginForm, Model model) {
 	    session.setAttribute("form", loginForm);
 	    return loginLogic.loginAuth(loginForm, model);
 	}
-	
+
 }
