@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-  <head>
-    <title>Hello</title>
-    <meta charset="utf-8" />
-  </head>
+  <head th:replace="common/layout :: base_header('Main',~{::link})"></head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
   <body>
-  	<form method="post" action="#" th:action="@{./loginUser}" th:object="${form}">
-	    <h1>Welcome to User!!!</h1>
-	    <div>
-	      <span th:text="${message}"></span>
-          <span th:text="${session}"></span>
-	    </div>
-	    <input type="submit" name="back" value="戻る" />
-    </form>
+    <div class="component">
+      <div th:replace="common/layout :: header"></div>
+       <form method="post" action="#" th:action="@{./loginUser}" th:object="${form}">
+         <input name="name" type="text" /><br/>
+         <div><a>aaaa</a></div>
+         <div><a>aaaa</a></div>
+<!-- <span th:text="${session}"></span>-->
+         <input type="submit" name="back" value="戻る" />
+       </form>
+      <div th:replace="common/layout :: footer"></div>
+    </div>
   </body>
 </html>

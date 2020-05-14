@@ -1,0 +1,28 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<!--引数の title, links は fragment expressions */-->
+<head th:fragment="base_header(title,links)">
+  <!--/* 各ビュータイトル */-->
+  <title th:text="${title==null}? 'Spring boot de Hello world!' : ${title}+' | Spring boot de Hello world!'">Spring boot de Hello world!</title>
+  <meta charset="utf-8" />
+  <!--/* 必ず読み込むファイル */-->
+  <!--  jquery導入 -->
+  <script type='text/javascript' src='webjars/jquery/3.5.1/dist/jquery.min.js'></script>
+  <!-- boostrap導入 -->
+  <link rel='stylesheet' href='webjars/bootstrap/4.4.1/css/bootstrap.min.css'>
+  <!-- 共通Style -->
+  <link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/style.css}">
+  <link rel="stylesheet" type="text/css" media="handheld" th:href="@{/css/style.css}">
+  <!-- favicon -->
+  <link rel="shortcut icon" th:href="@{/images/favicon.ico}">
+  <!--/* IE対応 */-->
+  <!-- /*<script type="text/javascript" th:src="@{/js/ie10-viewport-bug-workaround.js}"></script>*/ -->
+  <!--/* 固有で読み込むリンク */-->
+  <!-- /*<th:block th:replace="${links}" />*/ -->
+</head>
+<header th:fragment="header">
+  <div th:replace="common/header :: header"></div>
+</header>
+<footer th:fragment="footer">
+  <div th:replace="common/footer :: footer"></div>
+</footer>
+</html>
