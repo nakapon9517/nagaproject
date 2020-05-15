@@ -1,5 +1,6 @@
 package com.example.myproject.top;
-
+//セッション ID、作成時刻、最終アクセス時刻など、セッションに関する情報を表示および操作する
+//オブジェクトをセッションにバインドし、ユーザー情報を複数のユーザー接続で保持できるようにする
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
