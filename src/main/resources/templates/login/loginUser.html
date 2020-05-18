@@ -5,6 +5,7 @@
   <body>
     <div class="component">
       <div th:replace="common/layout :: header"></div>
+      <!-- リンクURL th:属性名="@{/  }" -->
        <form method="post" action="#" th:action="@{./loginUser}" th:object="${form}">
          <input name="name" type="text" /><br/>
          <div><a>aaaa</a></div>

@@ -1,5 +1,6 @@
 package com.example.myproject.login;
-
+//セッション ID、作成時刻、最終アクセス時刻など、セッションに関する情報を表示および操作する
+//オブジェクトをセッションにバインドし、ユーザー情報を複数のユーザー接続で保持できるようにする
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,14 +12,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.example.myproject.constants.Constants;
 
-@Controller
-public class LoginController {
+@Controller//これによってコントローラーとSpringbootでは認識される
+public class LoginController {//リクエストに対してメソッドやハンドラをマッピングできる
 
     @Autowired
     private LoginLogic loginLogic;
 
     @Autowired
-    private HttpSession session;
+    private HttpSession session;//セッションスコープ設定のために宣言
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String init(Model model) {
