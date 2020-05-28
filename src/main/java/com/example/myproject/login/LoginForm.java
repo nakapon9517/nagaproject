@@ -14,7 +14,10 @@ public class LoginForm implements Serializable {//Serializable バイナリデ�
 
     /** ログインID */
     private String uid;
+//    public String getUid(){ return uid;}
+//	  public void setUid(String uid){String Uid = uid;}
     /** パスワード */
     private String pwd;
-
+//  public String getPwd() {return pwd;}
+//  public void setPwd(String pwd){String Pwd = pwd;}
 }//uidとpwdを取得するための処理が記載されてる？
